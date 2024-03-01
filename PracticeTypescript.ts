@@ -1,13 +1,13 @@
-// const { Response, Request, NextFunction } = require("express");
+import { Response, Request, NextFunction } from "express";
 
-exports.exampleFunc = (_req, res, _next) => {
+exports.exampleFunc = (req: Request, res: Response, next: NextFunction) => {
   return res.json({
     message: "Chúc Dũng ngủ ngon!",
     statusCode: 200,
   });
 };
 
-module.exports = function testModuleExport(req, res) {
+module.exports = function testModuleExport(req: Request, res: Response) {
   return res.json({
     message: "func is active",
     statusCode: 200,
